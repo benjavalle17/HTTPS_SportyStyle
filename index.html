@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportyStyle - Tu Tienda Deportiva</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+    <h1>SportyStyle</h1>
+    
+    <div id="auth-section" style="padding: 10px; text-align: right;">
+        <button id="btn-login">Iniciar Sesión</button>
+        
+        <div id="user-info" style="display: none;">
+            <span id="welcome-msg"></span> <button id="btn-logout">Cerrar Sesión</button>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="categoria">
+            <h2>Camisetas Deportivas</h2>
+            <div id="camisetas-list" class="productos-grid">
+    <div class="producto">
+     <h3>Camiseta Running Pro Hombre</h3> 
+     <p>Tela ultra liviana para maratones.</p> 
+     <p>Precio: $15.990</p>
+     <img src="IMG/polera-running.jpg" alt="Camiseta Running">
+     <button onclick="agregarAlCarrito('Camiseta Running Pro Hombre', 15990)">Agregar al carrito</button> 
+     </div>
+    <div class="producto">
+     <h3>Camiseta Running Pro Mujer</h3> 
+     <p>Tela ultra liviana para maratones.</p>
+      <p>Precio: $15.990</p>
+      <img src="IMG/polera-running-mujer.jpg" alt="Camiseta Running">
+      <button onclick="agregarAlCarrito('Camiseta Running Pro Mujer', 15990)">Agregar al carrito</button>
+      </div>
+
+    <div class="producto"> 
+    <h3>Camiseta Futbol U.de Chile</h3> 
+    <p>Polera Oficial Universidad de Chile 26/27.</p> 
+    <p>Precio: $72.990</p> 
+    <img src="IMG/polera-futbol.jpg" alt="Camiseta Futbol U. de Chile">
+    <button onclick="agregarAlCarrito('Camiseta Futbol U. de Chile', 72990)">Agregar al carrito</button>
+   </div>
+
+   <div class="producto">
+    <h3>Camiseta Futbol Mujer U.de Chile</h3> 
+    <p>Polera Oficial Mujer Universidad de Chile 26/27.</p> 
+    <p>Precio: $72.990</p> 
+    <img src="IMG/polera-futbol-mujer.jpg" alt="Camiseta Futbol Mujer U. de Chile">
+    <button onclick="agregarAlCarrito('Camiseta Futbol Mujer U. de Chile', 72990)">Agregar al carrito</button>
+   </div>
+   
+            </div>
+  </section>
+
+        <section class="categoria">
+            <h2>Pantalones Deportivos</h2>
+            <div id="pantalones-list" class="productos-grid">
+      <div class="producto">
+      <h3>Short Entrenamiento Negro</h3>
+      <p>Short ligero con tecnología de secado rápido y bolsillos laterales.</p>
+      <p>Precio: $12.990</p>
+      <img src="IMG/short-negro.jpg" alt="Short Deportivo Hombre">
+       <button onclick="agregarAlCarrito('Short Entrenamiento Negro', 12990)">Agregar al carrito</button>
+        </div>
+
+      <div class="producto">
+      <h3>Buzo Sport Confort Gris</h3>
+      <p>Buzo unisex de algodón premium, ideal para calentamiento o descanso.</p>
+      <p>Precio: $24.990</p>
+      <img src="IMG/buzo-gris.jpg" alt="Buzo Deportivo Unisex">
+      <button onclick="agregarAlCarrito('Buzo Sport Confort Gris', 24990)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h3>Falda Tenis/Paddle Rosada</h3>
+            <p>Falda con calza integrada para máxima seguridad y movimiento.</p>
+            <p>Precio: $18.990</p>
+            <img src="IMG/falda-rosada.jpg" alt="Falda Deportiva Rosada">
+            <button onclick="agregarAlCarrito('Falda Tenis/Paddle Rosada', 18990)">Agregar al carrito</button>
+        </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Accesorios de Deporte</h2>
+            <div id="accesorios-list" class="productos-grid">
+
+          <div class="producto">
+          <h3>Mochila Training Pro</h3>
+          <p>Mochila ergonómica con compartimiento especial para calzado y ventilación.</p>
+          <p>Precio: $32.990</p>
+          <img src="IMG/mochila-deportiva.jpg" alt="Mochila Deportiva">
+          <button onclick="agregarAlCarrito('Mochila Training Pro', 32990)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h3>Pelota Oficial Liga Chilena 2026</h3>
+            <p>Balón profesional de alta resistencia con diseño exclusivo de la temporada 2026.</p>
+            <p>Precio: $134.990</p>
+            <img src="IMG/pelota-anfp.jpg" alt="Pelota Liga Chilena 2026">
+            <button onclick="agregarAlCarrito('Pelota Oficial Liga Chilena 2026', 134990)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h3>Botella Hydra-Max 1L</h3>
+            <p>Botella de acero inoxidable que mantiene el agua fría por 24 horas.</p>
+            <p>Precio: $14.990</p>
+            <img src="IMG/botella-agua.jpg" alt="Botella para Agua">
+            <button onclick="agregarAlCarrito('Botella Hydra-Max 1L', 14990)">Agregar al carrito</button>
+        </div>
+
+            </div>
+        </section>
+    </main>
+
+    <aside id="carrito-container">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total-precio">0</span></p>
+        <button id="btn-finalizar">Finalizar Compra</button>
+        
+    </aside>
+    <section id="pago-simulado" style="margin-top: 20px; padding: 20px; border: 1px solid #ccc;">
+    <h3>Datos de Despacho y Pago</h3>
+    <form id="form-pago">
+        <label>Nombre Completo:</label><br>
+        <input type="text" id="nombre-completo" required><br><br>
+
+        <label>Dirección de Envío:</label><br>
+        <input type="text" id="direccion" required><br><br>
+
+        <label>Correo Electrónico:</label><br>
+        <input type="email" id="email" placeholder="ejemplo@correo.com" required><br><br>
+
+        <label>Teléfono:</label><br>
+        <input type="tel" id="telefono" placeholder="Solo números" required><br><br>
+
+        <button type="button" id="btn-pagar">Finalizar y Pagar</button>
+    </form>
+</section>
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+</html>
